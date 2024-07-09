@@ -1,0 +1,54 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+    <div class="row">
+    <div class="col-8 offset-2">
+    <br><br>
+    <h4>Create new Listing</h4>
+    <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" name="title" placeholder="Add a catchy title" id="title" class="form-control" required>
+        <div class="valid-feedback">
+            Title Looks Good!
+        </div>
+        </div>
+        <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="description" placeholder="Enter Description" id="description" class="form-control" required></textarea>
+        <div class="invalid-feedback">
+            Please enter a short description
+        </div>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input type="file" name="image"  id="image" class="form-control" required>
+            </div>
+        <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" name="location" placeholder="Jaipur,Rajasthan" id="location" class="form-control" required>
+        <div class="invalid-feedback">
+            Location should be valid
+        </div>
+        <div class="row">
+        <div class="mb-3 col-md-8">
+        <label for="country" class="form-label">Country</label>
+        <input type="text" name="country" placeholder="India" id="country" class="form-control" required>
+        <div class="invalid-feedback">
+            Country should be valid
+        </div>
+        </div>
+        <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Price</label>
+        <input type="text" name="price" placeholder="1200" id="price" class="form-control" required>
+        <div class="invalid-feedback">
+            Price should be valid
+        </div>
+        </div>
+        </div>
+        <br>
+        <button type="submit" class="btn add-btn ">Add</button>
+        <br><br>
+    </form>
+</div>
+</div>
+</body>
